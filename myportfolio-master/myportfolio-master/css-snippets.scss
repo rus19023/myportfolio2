@@ -1,0 +1,83 @@
+/* label is clickable */
+label#markbtn {
+    cursor: pointer;
+    border-radius: 0;
+    width: 6vw;
+}
+
+#boxborder {
+    border: $border;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+input#checkbox {
+    border: 1px solid $primary;
+    padding: 0;
+    margin: 0;
+}
+
+
+input#checkbox::after {
+    content: '✕';
+    border: $border;
+    border-radius: 10px;
+}
+
+/* Custom Icons For Checkbox */
+label {
+    cursor: pointer;
+    color: #c0392b;
+    margin: 5px 0;
+    padding-left: 40px;
+    position: relative;
+    font-size: 30px;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear
+}
+
+label:before, label:after {
+    content: '';
+    left: 11px;
+    width: 3px;
+    bottom: 0;
+    background: $p-60;
+    position:absolute;
+    top:0
+}
+
+label:before {
+    transform:rotate(45deg);
+    transform-origin:0 14px;
+    height:0;
+    -webkit-transition:.2s linear;
+    -moz-transition:.2s linear;
+    -o-transition:.2s linear;
+    transition:.2s linear
+}
+
+label:after {
+    transform:rotate(-45deg);
+    transform-origin:0 20px;
+    height:0;
+    -webkit-transition:.2s linear .2s;
+    -moz-transition:.2s linear .2s;
+    -o-transition:.2s linear .2s;
+    transition:.2s linear .2s
+}
+
+input[type="checkbox"] {
+    display:none
+}
+
+input[type="checkbox"]:checked + label:after,input[type="checkbox"]:checked + label:before {
+    height:100%
+}
+
+input[type="checkbox"]:checked + label {
+    color:#fff
+}

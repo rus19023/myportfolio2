@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+    <title id="wdd330weekpagetitle">week page title</title>
+  </head>
+
+  <body>
+    <header id="autoheader">auto header</header>
+    <main>
+      <h1 id="wdd330weekpageheading" class="padit">Notes for this week</h1>
+      <ul>
+        <li>
+          <div>
+            <h2>
+              <a
+                href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b"
+              >
+                Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION
+              </a>
+            </h2>
+            <h3>Section 2: Programming Basics</h3>
+            <p class="code">
+              Reserved words: <br />
+              abstract, await, boolean, break, byte, case, catch, char, class,
+              const, continue, debugger, default, delete, do, double, else,
+              enum, export, extends, false, final, finally, float, for,
+              function, goto, if, implements, import, in instanceof, int,
+              interface, let, long, native, new, null, package, private,
+              protected, public, return, short, static, super, switch,
+              synchronized, this, throw, throws, transient, true, try, typeof,
+              var, volatile, void, while, with, yield
+            </p>
+            <p class="normal-text">
+              JavaScript has seven different data types. Six of them are
+              primitive data types and are listed below:
+            </p>
+            <ul>
+              <li class="normal-text">String</li>
+              <li class="normal-text">
+                Symbol (The symbol primitive data type was only introduced in
+                ES6.)
+              </li>
+              <li class="normal-text">Number</li>
+              <li class="normal-text">Boolean</li>
+              <li class="normal-text">Undefined</li>
+              <li class="normal-text">Null</li>
+            </ul>
+            <p class="normal-text">
+              Any value that isn’t one of the primitive data types listed above
+              is an object. These include arrays, functions and object literals
+            </p>
+            <p class="normal-text">
+              Using const prevents you from reassigning a variable to another
+              object, as it will produce an error, as illustrated below:
+            </p>
+            <pre class="code">
+                  // declare object
+                  const name = { value: 'Alexa' };
+
+                  // attempt to reassign to another object
+                  name = { value: 'Siri' }
+                  &lt;&lt; TypeError: Assignment to constant variable.
+                </pre
+            >
+            <p class="">
+              ***It may seem like a restriction to use const, but it actually
+              helps make your programs more predictable if the assignment to
+              variables can't change. For this reason, you should try to use
+              const to declare most variables. This helps to avoid any bugs
+              caused by unexpected changes in assignment.
+            </p>
+            <p class="normal-text">
+              Any variable declared outside of a block is said to have global
+              scope. This means it is accessible everywhere in the program.
+              While this may seem to be a good idea at first, it is not
+              considered good practice. A ninja programmer will try to keep the
+              number of global variables to a minimum, because any variables
+              that share the same name will clash and potentially overwrite each
+              other’s values.[1]
+            </p>
+            <p class="normal-text">
+              If let or const are not used, the variable will have global scope
+              and be available outside the block. This can be demonstrated in
+              the following example, where the variable a can have two different
+              values depending on whether it is defined inside or outside a
+              block:
+            </p>
+            <p class="normal-text">
+              In ES6, blocks can be used to create a local scope. This means
+              that any variables defined inside a block using the let or const
+              will only be available inside that block and not be accessible
+              outside of that block. This is known as having local scope, as the
+              variable is only visible in the locality of the block.
+            </p>
+            <pre class="code">
+                  const a = 1;
+
+                  { const a = 3; a; }
+                  &lt;&lt; 3
+                </pre
+            >
+            <p>
+              Constant and variable names can start with any upper or lower-case
+              letter, an underscore, _, or dollar character, $. They can also
+              contain numbers, but cannot start with them. <br />
+              Here are some valid examples:
+            </p>
+            <pre class="code">
+                  $name
+                  _answer
+                  firstName
+                  last_name
+                  address_line1
+                </pre
+            >
+            <p class="normal-text">
+              <br />
+              Variables that start with an underscore generally refer to private
+              properties and methods, so it's best to not follow this convention
+              for your own variable names. <br /><br />
+              The $ character is also used by the popular jQuery library, so
+              using this in your variable names may also cause problems.
+            </p>
+            <p class="normal-text">
+              When you assign a primitive value to a variable, any changes you
+              make are made directly to that value:
+            </p>
+            <pre class="code">
+                  const a = 1;
+                  let b = a;
+                  // a = 1, b = 1
+
+                  b = 2;
+                  // a = 1, b = 2
+                </pre
+            >
+
+            <h3>Questions</h3>
+            <ul>
+              <li>
+                [1] I don't understand the concept of global variables inside a
+                block, if globals are made outside blocks. What's the point or
+                use for this??
+              </li>
+              <li>Are blocks "{}" only used for functions and logic?</li>
+            </ul>
+            <p class="normal-text">
+              The backslash is used to escape special characters in strings such
+              as:
+            </p>
+            <ul>
+              <li class="normal-text">Single quote marks \'</li>
+              <li class="normal-text">Double quote marks \"</li>
+              <li class="normal-text">End of line \n</li>
+              <li class="normal-text">Carriage return \r</li>
+              <li class="normal-text">Tab \t</li>
+            </ul>
+            <p class="normal-text">
+              If you want to actually write a backslash, you need to escape it
+              with another backslash:
+            </p>
+            <pre class="code">
+                  "This is a backslash \\"
+                  &lt;&lt; "This is a backslash \"
+                </pre
+            >
+            <p class="normal-text">
+              The backslash is also used to escape the newline character, which
+              is used to separate lines in a string.
+            </p>
+            <pre class="code">
+                  const name = 'Alexa'; // declare and assign a variable
+                  &lt;&lt; 'Alexa'
+                  name.length; // retrieve the name variable's length property
+                  &lt;&lt; 5
+                </pre
+            >
+            <p class="normal-text">
+              All properties of primitive data types are immutable, meaning
+              they’re unable to be changed. <br />
+              Some string properties:
+            </p>
+            <pre class="code">
+                  name.toUpperCase();
+                  &lt;&lt; 'ALEXA'
+                  name.toLowerCase();
+                  &lt;&lt; 'alexa'
+                  name.charAt(1);
+                  &lt;&lt; 'l'
+                  name.indexOf('A');
+                  &lt;&lt; 0
+                  name.includes('a');
+                  &lt;&lt; true
+
+                  name.includes('z');
+                  &lt;&lt; false
+                  name.startsWith('A');
+                  &lt;&lt; true
+
+                  name.startsWith('a');
+                  &lt;&lt; false
+                  name.endsWith('A');
+                  &lt;&lt; false
+
+                  name.endsWith('a');
+                  &lt;&lt; true'
+                  JavaScript'.concat('Ninja');
+                  &lt;&lt; 'JavaScriptNinja'
+
+                  'Hello'.concat(' ','World','!');
+                  &lt;&lt; 'Hello World!'
+                  '    Hello World     '.trim(); // the space in the middle will be preserved
+                  &lt;&lt; 'Hello World'
+
+                  '   \t\t  JavaScript Ninja! \r'.trim(); // escaped tabs and carriage returns are also removed
+                  &lt;&lt; 'JavaScript Ninja!'
+                  'Hello'.repeat(2);
+                  &lt;&lt; 'HelloHello'
+                  `She said, "It's Me!"`  // Template literals
+                  const age = 39;
+                  `I will be ${ age + 1 } next year`;
+                  &lt;&lt; 'I will be 40 next year'
+                  `This is the start ...
+
+
+                  .... and this is the end`
+                  &lt;&lt; 'This is the start ...\n\n\n.... and this is the end'
+                  `This character, \`, is a backtick`
+                  &lt;&lt; 'This character, `, is a backtick'
+                </pre
+            >
+            <p class="normal-text">
+              Symbols were introduced as a new primitive value in ES6. They can
+              be used to create unique values, which helps to avoid any naming
+              collisions.
+              <br />
+              Symbols are the only primitives that don't have a literal form.
+              The only way to create them is to use the Symbol() function:
+            </p>
+            <pre class="code">
+                  const uniqueID = Symbol('this is a unique ID');
+                  const A = Symbol.for('shared symbol');
+                  const B = Symbol.for('shared symbol');
+                </pre
+            >
+            <p class="normal-text">
+              It is possible for two variables to point to the same symbol if
+              the for() method is used when the symbol is created:
+            </p>
+            <pre class="code">
+                  const uniqueID = Symbol('this is a unique ID');
+                  const A = Symbol.for('shared symbol');
+                  const B = Symbol.for('shared symbol');
+                </pre
+            >
+            <p class="normal-text">
+              <a href="https://www.sitepoint.com/es6-symbols-uses/"
+                >More info about Symbols</a
+              >
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h2>
+              <a
+                href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b"
+              >
+                Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION
+              </a>
+            </h2>
+            <h3>Section 3: Arrays, Logic, Loops</h3>
+            <p class="normal-text">Initializing an Array:</p>
+            <pre class="code">
+                  const heroes = [];
+                </pre
+            >
+            <p class="normal-text">
+              Delete: remove item from array, but not its space! (leaves it as
+              undefined)
+            </p>
+            <pre class="code">
+                  delete heroes[3];
+                </pre
+            >
+            <p class="normal-text">
+              Destructuring an array is the concept of taking values out of an
+              array and presenting them as individual values.
+              <br />
+              Destructuring allows us to assign multiple values at the same
+              time, using arrays:
+            </p>
+            <pre class="code">const [x,y] = [1,2];</pre>
+            <p class="normal-text">Destructuring also works on objects, e.g.</p>
+            <pre class="code">
+                    var myObject = {
+                      one:   'a',
+                      two:   'b',
+                      three: 'c'
+                    };
+
+                    // ES5 exampl
+                    var
+                      one   = myObject.one,
+                      two   = myObject.two,
+                      three = myObject.three;
+
+                      // one = 'a', two = 'b', three = 'c'
+
+                      // ES6 destructuring example
+                      const {one, two, three} = myObject;
+
+                      // one = 'a', two = 'b', three = 'c'
+                  </pre
+            >
+            <p class="normal-text"></p>
+            <pre class="code">
+                    avengers.length = 3
+                    &lt;&lt; 3
+
+                    avengers
+                    &lt;&lt; ['Captain America', 'Iron Man', 'Thor']
+                    avengers.pop();  // removes last item from array
+
+                    &lt;&lt; 'Thor'
+
+                    avengers
+                    &lt;&lt; ['Captain America', 'Iron Man']
+
+                    avengers.shift();  // removes first item from array
+                    &lt;&lt; 'Captain America'
+
+                    avengers.push('Thor'); // adds to the end of array
+                    &lt;&lt; 2
+
+                    avengers.unshift('Captain America');  // appends to start of array
+                    &lt;&lt; 3
+                    avengers.concat(['Hulk','Hawkeye', 'Black Widow']);
+                    &lt;&lt; ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow']
+                  </pre
+            >
+            <p class="normal-text">
+              An alternative is to use the new spread operator that was added to
+              ES6. The spread operator is three dots, ... that are placed in
+              front of an array, with the effect of spreading out the elements
+              of that array. This can be used to spread the elements of two
+              arrays and put them together in a new array, like so:
+            </p>
+            <pre class="code">
+                    avengers = [ ...avengers, ...['Hulk','Hawkeye', 'Black Widow'] ];
+                    &lt;&lt; ['Captain America', 'Iron Man', 'Thor', 'Hulk', 'Hawkeye', 'Black Widow']
+
+                    avengers.join();  // transforms array into comma delimited string
+                    &lt;&lt; 'Captain America, Iron Man, Thor, Hulk, Hawkeye, Black Widow'avengers.join(' & ');
+                    &lt;&lt; 'Captain America & Iron Man & Thor & Hulk & Hawkeye & Black Widow'
+                  </pre
+            >
+            <p class="normal-text">
+              The slice() method creates a subarray; effectively chopping out a
+              slice of an original array, starting at one position and finishing
+              at another. For example, if we wanted to find the 3rd and 4th item
+              in our array we would use the following code:
+            </p>
+            <pre class="code">
+                    avengers.slice(2,4) // starts at the third item (index of 2) and finishes at the fourth (the item with index 4 is not included)
+                    &lt;&lt; ['Thor', 'Hulk']  //no items are actually removed from the array
+                  </pre
+            >
+            <p class="normal-text">
+              The splice() method removes items from an array then inserts new
+              items in their place. For example, the following code removes the
+              string 'Hulk' and replaces it with 'Scarlett Witch'.
+              <br />
+              The first number in the parentheses tells us the index at which to
+              start the splice. In the example we started at index 3, which is
+              the fourth item in the array ('Hulk'). The second number tells us
+              how many items to remove from the array. In the example, this was
+              just one item. Every value after this is then inserted into the
+              array in the same place the other items were removed.
+            </p>
+            <pre class="code">
+                    avengers.splice(3, 1, 'Scarlet Witch'); // This is a destructive operation as it changes the value of the array
+                    &lt;&lt; ['Hulk']
+
+                    avengers
+                    &lt;&lt; ['Captain America', 'Iron Man', 'Thor', 'Scarlet Witch', 'Hawkeye', 'Black Widow']
+                  </pre
+            >
+            <p class="normal-text">
+              The splice() method can also be used to insert values into an
+              array at a specific index without removing any items, by
+              indicating that zero items are to be removed:
+            </p>
+            <pre class="code">
+                    avengers.splice(4,0,'Quicksilver');
+                    &lt;&lt; []
+
+                  </pre
+            >
+            <p class="normal-text">
+              Notice that an empty array is returned (because nothing was
+              removed), but the new value of 'Quicksilver' has been inserted at
+              position 4, which we can see if we look at the avengers array:
+            </p>
+            <pre class="code">
+                    avengers
+                    &lt;&lt; [ 'Captain America','Iron Man', 'Thor', 'Scarlet Witch', 'Quicksilver', 'Hawkeye', 'Black Widow' ]
+
+                    avengers.reverse();
+                    &lt;&lt; ['Black Widow', 'Hawkeye', 'Quicksilver', 'Scarlet Witch', 'Iron Man', 'Captain America']
+
+                    avengers.sort();
+                    &lt;&lt; ['Black Widow', 'Captain America', 'Hawkeye', 'Iron Man', 'Quicksilver', 'Scarlet Witch']
+                  </pre
+            >
+            <p class="normal-text">
+              It is alphabetical order by default for String objects. Note that
+              this also changes the order of the array permanently.
+              <br />
+              Numbers are also sorted alphabetically (that is, by their first
+              digit, rather than numerically), so 9 will come after 10 when you
+              try to sort an array of numbers
+            </p>
+            <pre class="code">
+                    [5, 9, 10].sort();
+                    &lt;&lt; [10, 5, 9]
+                  </pre
+            >
+            <p class="normal-text">
+              Use indexOf() method to find the first occurrence of a value in an
+              array. If the item is in the array, it will return the index of
+              the first occurrence of that item. If the item is not in the
+              array, it will return -1.
+            </p>
+            <pre class="code">
+                    avengers.includes('Iron Man');
+                    &lt;&lt; true
+
+                    avengers.includes('Thor');
+                    &lt;&lt; false
+                  </pre
+            >
+            <p class="normal-text">
+              You can even have an array of arrays, known as a multidimensional
+              array. This could be used to create a coordinate system, for
+              example:
+            </p>
+            <pre class="code">
+                    const coordinates = [[1,3],[4,2]];
+                    &lt;&lt; [[1,3],[4,2]]
+
+                  </pre
+            >
+            <p class="normal-text">
+              To access the values in a multidimensional array, we use two
+              indices: one to refer to the item’s place in the outer array, and
+              one to refer to its place in the inner array:
+            </p>
+            <pre class="code">
+                    coordinates[0][0]; // The first value of the first array
+                    &lt;&lt; 1
+
+                    coordinates[1][0]; // The first value of the second array
+                    &lt;&lt; 4
+
+                    coordinates[0][1]; // The second value of the first array
+                    &lt;&lt; 3
+
+                    coordinates[1][1]; // The second value of the second array
+                    &lt;&lt; 2
+                  </pre
+            >
+            <p class="normal-text">
+              The spread operator that we met earlier can be used to flatten
+              multi-dimensional arrays. Flattening an array involves removing
+              all nested arrays so all the values are on the same level in the
+              array. You can see an example of a flattened array below:
+            </p>
+            <pre class="code">
+                    const summer = ['Jun', 'Jul', 'Aug'];
+                    const winter = ['Dec', 'Jan', 'Feb'];
+                    const nested = [ summer, winter ];
+                    &lt;&lt; [ [ 'Jun', 'Jul', 'Aug' ], [ 'Dec', 'Jan', 'Feb' ] ]
+
+                    const flat = [...summer, ...winter];
+                    &lt;&lt; [ 'Jun', 'Jul', 'Aug', 'Dec', 'Jan', 'Feb' ]
+                  </pre
+            >
+            <p class="normal-text">
+              Sets were introduced to the specification in ES6. A set is a data
+              structure that represents a collection of unique values, so it
+              cannot include any duplicate values. They are similar in concept
+              to a mathematical set, although (for the time being at least) they
+              don't contain mathematical set operations such as union,
+              intersection and product.
+              <br />
+              Sets offer a useful way to keep track of data without having to
+              check if any values have been duplicated. It's also quick and easy
+              to check if a particular value is in a set, which can be a slow
+              operation if an array is used.
+              <br />
+              If you try to add a value that is already contained in the set,
+              then the operation is simply ignored. <br />
+              All non-primitive values, such as arrays and objects, are
+              considered unique values, even if they contain the same values. On
+              the face of it, this appears to allow duplicate values appear in a
+              set. <br />
+              Type coercion is not used when values are added to a set, so the
+              string '2' will be added as a new entry, even if the number 2 is
+              already an element of the set. <br />The has() method that sets
+              use is a very efficient operation and much faster than using the
+              includes() or indexOf() methods to check if a value is in an
+              array. <br />
+              Sets do not have index notation for inspecting individual entries,
+              so you can't find the value of the first element in a set.
+            </p>
+            <pre class="code">
+                    const list = new Set();
+
+                    list.add(1);
+                    &lt;&lt; Set { 1 }
+
+                    list.add(2).add(3).add(4);
+                    &lt;&lt; Set { 1, 2, 3, 4 }
+                    
+                    const numbers = new Set([1,2,3]);
+                    
+                    numbers
+                    &lt;&lt; Set { 1, 2, 3 }
+                    
+                    const moreNumbers = new Set([7,7,7,7,7,8,8,8,9,9]);
+
+                    moreNumbers
+                    &lt;&lt; Set {7,8,9}
+                    
+                    const letters = new Set('hello');
+                    letters
+                    &lt;&lt; Set { 'h', 'e', 'l', 'o' }
+                    
+                    const words = new Set().add('the').add('quick').add('brown').add('fox')
+
+                    words
+                    &lt;&lt; Set { 'the', 'quick', 'brown', 'fox' }
+                    
+                    const arrays = new Set().add([1]).add([1]);
+
+                    arrays
+                    &lt;&lt; Set { [ 1 ], [ 1 ] }
+                    
+                    [1] === [1];  // they may look the same, but are treated as different objects
+                    &lt;&lt; false
+                    
+                    const mixedTypes = new Set().add(2).add('2');
+
+                    mixedTypes
+                    &lt;&lt; Set { 2, '2' } 
+                    
+                    const jla = new Set().add('Superman').add('Batman').add('Wonder Woman');
+
+                    jla
+                    &lt;&lt; Set { 'Superman', 'Batman', 'Wonder Woman' }
+                    
+                    jla.size();
+                    &lt;&lt; 3
+                    
+                    jla.has('Superman');
+                    &lt;&lt; true
+                    
+                    jla.has('Green Lantern');
+                    &lt;&lt; false 
+                    
+                    jla[0]  // no index notation as in arrays
+                    &lt;&lt; undefined 
+                    
+                    jla.delete('Superman');
+                    &lt;&lt; true
+                    
+                    jla.delete('Flash');
+                    &lt;&lt; false 
+                    
+                    jla.clear();
+
+                    jla
+                    &lt;&lt; Set {}
+                    
+                    jla.size
+                    &lt;&lt; 0
+                  </pre
+            >
+            <p class="normal-text">
+              A set can be converted into an array by placing the set, along
+              with the spread operator directly inside an array literal.
+              <br />To demonstrate this, first we'll create a set of three
+              items:
+            </p>
+            <pre class="code">
+                    const shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');
+
+                    shoppingSet
+                    &lt;&lt; Set { 'Apples', 'Bananas', 'Beans' } 
+                    
+                    const shoppingArray = [...shoppingSet]
+
+                    shoppingArray
+                    &lt;&lt; [ 'Apples', 'Bananas', 'Beans' ] 
+                    
+                    const shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');
+
+                    const shoppingArray = Array.from(shoppingSet); 
+                    
+                    const duplicate = [3, 1, 4, 1, 5, 9, 2, 6 ,5,3,5,9];
+                    &lt;&lt; [ 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 9 ]
+
+                    const nonDuplicate = [...new Set(repeatedArray)];
+                    &lt;&lt; [ 3, 1, 4, 5, 9, 2, 6 ]
+                  </pre
+            >
+            <p class="normal-text">
+              Weak Sets <br />
+              When objects are added to sets, they will be stored there as long
+              as the set exists, even if the original reference to the object is
+              removed. The technical term for this is the object is prevented
+              from being garbage-collected, which can cause a memory leak. This
+              can be seen in the following example. The array still exists
+              inside the set and we can get the original value of array back
+              using the spread operator:
+            </p>
+            <pre class="code">
+                    let array = [1,2,3];
+                    const strong = new Set().add(array);
+                    
+                    array = null; // remove reference to the original
+                    
+                    strong
+                    &lt;&lt; Set { [ 1, 2, 3 ] } 
+                    
+                    array = [...strong][0];
+
+                    array
+                    &lt;&lt; [1,2,3] 
+                    
+                    const weak = new WeakSet(); 
+                    weak.add(2)
+                    &lt;&lt; TypeError: Invalid value used in weak set 
+                    
+                    const array = [1,2,3];
+                    weak.add(array);
+                    &lt;&lt; WeakSet {}
+                  </pre
+            >
+            <p class="normal-text">
+              Because weak maps use weak references to objects, they don't have
+              access to a list of values they contain. This makes the return
+              value in the example look as though the weak set is empty, when,
+              in fact it isn't.
+              <br />
+              We can confirm it does indeed contain the array object by using
+              the has() method:
+            </p>
+            <pre class="code">
+                    weak.has(array);
+                    &lt;&lt; true 
+                    
+                    weak.delete(array);
+                    &lt;&lt; true 
+                    
+                    weak.has(array);
+                    &lt;&lt; false
+                  </pre
+            >
+            <p class="normal-text">
+              Maps were another data structure introduced in the ES6
+              specification. They are a convenient way of keeping a list of key
+              and value pairs, and are similar to 'hashes', or 'hash tables' or
+              'dictionaries' in other programming languages.
+              <br />
+              At first glance, maps appear to be similar to JavaScript objects
+              (covered in Chapter 5), but they have some noticeable differences:
+            </p>
+            <ul>
+              <li class="normal-text">
+                Objects are limited to using strings for key values, whereas
+                maps can use any data type as a key.
+              </li>
+              <li class="normal-text">
+                There is no efficient way to find the number of key-value pairs
+                an object has, whereas this is easy to do with maps using the
+                size property.
+              </li>
+              <li class="normal-text">
+                Objects have methods that can be called (see Chapter 5) and
+                prototypes that can be used to create a chain of inheritance
+                (see Chapter 12), whereas maps are solely focused on the storage
+                and retrieval of key-value pairs.
+              </li>
+              <li class="normal-text">
+                The value of an object's properties can be accessed directly,
+                whereas maps restrict you to using the get() method to retrieve
+                any values.
+              </li>
+            </ul>
+            <pre class="code">
+                    const romanNumerals = new Map(); 
+                    romanNumerals.set(1,'I');
+                    &lt;&lt; Map { 1 => 'I' } 
+                    
+                    romanNumerals.set(2,'II').set(3,'III').set(4,'IV').set(5,'V');
+                    &lt;&lt; Map { 1 => 'I', 2 => 'II', 3 => 'III', 4 => 'IV', 5 => 'V' } romanNumerals.get(4);
+                    &lt;&lt; 'IV' 
+                    
+                    romanNumerals.has(5);
+                    &lt;&lt; true
+                    
+                    romanNumerals.has(10);
+                    &lt;&lt; false const 
+                    
+                    heroes = new Map([ ['Clark Kent','Superman'],
+                    ['Bruce Wayne', 'Batman']
+                    ]); 
+                    
+                    heroes.size
+                    &lt;&lt; 2 
+                    
+                    heroes.delete('Clark Kent');
+                    &lt;&lt; true
+                    
+                    heroes.size
+                    &lt;&lt; 1 
+                    
+                    heroes.clear();
+
+                    heroes.size;
+                    &lt;&lt; 0 
+                    
+                    // Maps can be converted into a nested array of key-value pairs in a similar way to sets; using either the spread operator
+                    [...romanNumerals]
+                    &lt;&lt; [ [ 1, 'I' ], [ 2, 'II' ], [ 3, 'III' ], [ 4, 'IV' ], [ 5, 'V' ] ] 
+                    
+                    // ... or the Array.from() method:
+                    Array.from(romanNumerals)
+                    &lt;&lt; [ [ 1, 'I' ], [ 2, 'II' ], [ 3, 'III' ], [ 4, 'IV' ], [ 5, 'V' ] ] 
+                    
+                    // Weak maps can use the has(), get(), set() and delete() methods in the same way as a regular map.
+                    const weak = new WeakMap();
+                  </pre
+            >
+
+            <p class="normal-text">
+              A shorthand way of writing an if ... else statement is to use the
+              ternary operator, ?, which takes three operands in the following
+              format:
+            </p>
+            <pre class="code">
+                    condition ? (//code to run if condition is true) : (//code to run if condition is false) 
+                    
+                    const n = 5;
+                    n%2 === 0 ? console.log('n is an even number') : console.log('n is an odd number');
+                    &lt;&lt; 'n is an odd number' 
+                    
+                    // make the example even shorter by placing the ternary operator inside a template string
+                    console.log(`n is a ${(n%2 === 0)? 'even' : 'odd'} number`);
+                  </pre
+            >
+            <h4>Loops</h4>
+            <p class="normal-text"></p>
+            <pre class="code">
+
+                    // while loop
+                    while (condition) {
+                      // do something
+                    } 
+                      
+                    let bottles = 10;
+                      while (bottles > 0){
+                          console.log(`There were ${bottles} green bottles, hanging on a wall.
+                           And if one green bottle should accidentally fall, there'd be 
+                           ${bottles-1} green bottles hanging on the wall`);
+                          bottles--;
+                      } 
+                      
+                      // Here’s a more concise way of writing the same loop that moves the increment into the condition
+                      let bottles = 11;
+                      while (--bottles){
+                          console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
+                      } 
+                      
+                      // do .. while
+                      do {
+                        do something
+                    } while(condition) 
+                    
+                    let bottles = 10;
+                    do {
+                        console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
+                        bottles--;
+                    } while (bottles > 0) 
+
+
+                    // for loop
+                    for (initialization ; condition ; after) { do something } 
+                    
+                    for (let bottles = 10 ; bottles > 0 ; bottles--) {
+                      console.log(`There were ${bottles} green bottles, hanging on a wall. And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
+                  } 
+                  
+                  let bottles = 10; // bottles is initialized here instead
+                  for ( ; bottles > 0 ; ) { // empty initialization and increment
+                      console.log(`There were ${bottles} green bottles, hanging on a wall. 
+                      And if one green bottle should accidentally fall, 
+                      there'd be ${bottles-1} green bottles hanging on the wall`);
+                      bottles--; // increment moved into code block
+                  }
+
+                  // nested for loops
+                  for (let i=1; j $lt; 13; i++) {
+                    for (let i=1; j $lt; 13; j++) {
+                        console.log(`${j} multiplied by ${i} is ${i*j}`);
+                    }
+                  }
+
+                    // another for loop example
+                    for (let i=0; max=avengers.length; i $lt; max; i++) {
+                      console.log(avengers[i]);
+                      }
+                      &lt;&lt; 'Black Widow'
+                      &lt;&lt; 'Captain America'
+                      &lt;&lt; 'Hawkeye'
+                      &lt;&lt; 'Iron Man'
+                      &lt;&lt; 'Quicksilver'
+                      &lt;&lt; 'Scarlet Witch'
+                  </pre
+            >
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h2>
+              <a
+                href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b"
+              >
+                Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION
+              </a>
+            </h2>
+            <h3>Section 4: Functions</h3>
+            <p class="normal-text">
+              Function Expressions <br />
+              Another way of defining a function literal is to create a function
+              expression. This assigns an anonymous function to a variable:
+            </p>
+            <pre class="code">
+                    const goodbye = function() {
+                      console.log('Goodbye World!');
+                    };
+                  </pre
+            >
+          </div>
+        </li>
+      </ul>
+    </main>
+    <footer id="autofooter"></footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

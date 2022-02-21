@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+    <title id="cit327weekpagetitle">page title</title>
+  </head>
+
+  <body>
+    <header id="autoheader">auto header</header>
+    <main>
+      <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
+        <div>
+          <h2 id="paperTitle">paper title</h2>
+
+          <h3>What is ETL?</h3>
+          <p class="normal-text">
+            ETL is an acronym for Extract, Transform, Load. It is the process used with cloud or on-premise data warehouses to: Extract data from one or more sources, Transform it to match the standards needed for the repository, and Load it into said data warehouse repository. A newer take on ETL is ELT, which stands for Extract, Load, Transform. This is a similar process, only the data is loaded first, then transformed. The purpose is to mitigate coding error, migration speed and server scaling issues during the transformation procedure.
+          </p>
+
+            <h4 class="indent">Extract</h4>
+            <p class="normal-text indenth4">
+              As there may be many differently formatted data sources, extraction can be a difficult task. Data from each source must be profiled to determine if the data content, type and structure is workable with the business' needs. Version control helps monitor for changes in the data between sessions of exportation.
+            </p>
+
+            <h4 class="indent">Transform</h4>
+            <p class="normal-text indenth4">
+              Extracted data that is considered "dirty", or detracting from the integrity of the data, must now be "cleaned up", removing duplicate, poorly parsed and/or inconsistent data, correcting misspellings. Data changes tracked can be adjusted as needed, then the data is reformatted to make it uniform for reporting and analysis.
+            </p>
+
+            <h4 class="indent">Load</h4>
+            <p class="normal-text indenth4">
+              Data collected and structured can now be inserted into fact and dimension tables where it is stored in data cubes that can be "sliced and diced" for reports and analysis as needed.
+            </p>
+
+          <h3>What programming tools does ETL use?</h3>
+          <p class="normal-text">
+            There are many different programming languages, tools and methods used to perform ETL, which may or may not be part of an integrated warehousing system. They include: downloadable software or cloud services for data manipulation, security, policy compliance, version control, data integration, task automation, report generation and the list goes on and on. These tools may be commercially owned or open-source. Programming languages commonly used for ETL tools are Java, Python, R and Scala. (This is not a comprehensive list.)
+            <ul>
+              <li class="normal-text indent">
+                Amazon Redshift: Part of AWS, a column-oriented DBMS, up to 16 PB (petabytes) of data can be stored in a single cluster.
+              </li>
+              <li class="normal-text indent">
+                Apache Kudu: Part of Apache's Hadoop, a column-oriented data store, optimized for OLAP, open-source.
+              </li>
+              <li class="normal-text indent">
+                IBM InfoSphere DataStage: Part of IBM Information Platforms Solution, uses graphical notation for data integration, client/server architecture.
+              </li>
+              <li class="normal-text indent">
+                Microsoft Analysis Services: Part of Microsoft's SQL Server, a tool with two options- multidimensional or tabular, for OLAP and data mining.
+              </li>
+              <li class="normal-text indent">
+                Oracle Warehouse Builder: Complete service for data warehousing, includes data quality, integration and metadata management.
+              </li>
+              </li>
+              <li class="normal-text indent">
+                Snowflake Data Cloud.: Fully integrated PaaS, offers "near unlimited scale" in their "data cloud" for large enterprises to "access", "govern" and "action" data.
+              </li>
+              <li class="normal-text indent">
+                Teradata Vantage: Multi-cloud, hybrid data analysis platform, geared toward scaling for the biggest "big data" enterprises, based on machine.
+              </li>
+            </ul>
+          </p>
+          <ol class="sources">
+              Sources:
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Extract,_transform,_load"> "Extract, transform, load", Wikipedia</a>
+              </li>
+              <li>
+                <a href="https://www.informatica.com/resources/articles/what-is-etl.html">"ETL (Extract Transform Load): What You Need to Know", Informatica.com</a>
+              </li>
+              <li>
+                <a href="https://www.kimballgroup.com/2007/10/subsystems-of-etl-revisited/">Becker, Bob, "Subsystems of ETL Revisited", Kimball Group</a>
+              </li>
+              <li>
+                <a href="https://www.ibm.com/cloud/blog/elt-vs-etl-whats-the-difference">"ELT vs. ETL: What’s the Difference?", IBM Cloud Education</a>
+              </li>
+              <li> <a href="https://towardsdatascience.com/what-is-dirty-data-d96abbdf254e">Wu, Jun, "What is Dirty Data?", Towards Data Science</a>
+              </li>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Category:Data_warehousing_products">Wikipedia Category: "Data Warehousing Products"</a>
+              </li>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Amazon_Redshift">Wikipedia, Amazon Redshift</a>
+              </li>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Apache_Kudu">Wikipedia, Apache Kudu</a>
+              </li>
+              <li>
+                <a href="https://www.ibm.com/docs/en/iis/11.7?topic=qualitystage-overview-infosphere-datastage">"Overview of InfoSphere DataStage", IBM</a>
+              </li>
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Microsoft_Analysis_Services">Wikipedia, Microsoft Analysis Services</a>
+              </li>
+              <li>
+                <a href="https://docs.oracle.com/cd/E11882_01/owb.112/e10581/intro.htm#WBCON04360">"Introduction to Oracle Warehouse Builder", Oracle</a>
+              </li>
+              <li>
+                <a href="https://www.snowflake.com/data-cloud/">"Learn more about the Data Cloud", Snowflake Inc.</a>
+              </li>
+              <li><a href="https://www.teradata.com/Vantage">Teradata Vantage</a>
+              </li>
+              <li>
+                <a href="https://diceus.com/python-vs-java-for-big-data/">"Python for big data or Java – Choosing the best programming language", Diceus</a>
+              </li>
+
+            </ol>
+        </div>
+    </main>
+    <footer id="autofooter"></footer>
+    <script src="../js/main.js" ></script>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+    <title id="cit327weekpagetitle">page title</title>
+  </head>
+
+  <body>
+    <header id="autoheader">auto header</header>
+    <main>
+      <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
+      <div>
+        <h2 id="paperTitle">paper title</h2>
+
+        <h3>What is granularity?</h3>
+        <p class="normal-text">
+          Let's compare building a data warehouse to a bakery. There can be many
+          different items in the bakery: cakes, breads, cookies, etc. If you
+          don't include all the ingredients, in the correct measurements, and
+          follow each recipe's instructions using the correct utensils, the
+          baked goods will fail to rise, or taste bad, or look ugly. Every day
+          the baker makes many baked goods. He or she would need to calculate
+          the quantity of each ingredient at scale needed for each of the
+          completed goods, baked into differently shaped pans. The basic recipes
+          would define the granularity, the least amount of each ingredient,
+          each having the correct measurement, specific, ordered instructions to
+          create a perfect product, no matter what shape or size it might end
+          up.
+        </p>
+
+        <p class="normal-text">
+          "Recipes" are also needed to design each OLAP cube or data mart, which
+          are like the individual finished baked products. If you don't include
+          all the ingredients (fact tables) in the right measurements
+          (dimensions) and follow the instructions (use appropriate ETL Tools),
+          the cubes will also fail to rise (not have all the layers, rows and
+          columns), taste bad (not have the needed totals and subtotals) or just
+          look ugly (have holes in the data slices and/or dices).
+        </p>
+        <p class="normal-text">
+          Bakers will have experimented with different variables: measurements,
+          similar ingredients, bake times, etc, to come up with their perfect
+          version. They have spent many hours, used many ingredients, and thrown
+          away many finished products before that perfect version. Similarly, a
+          data mart recipe would need to be developed before the database is
+          baked (filled with data for reports and analysis).
+        </p>
+        <p class="normal-text">
+          The myriad ETL tools available today help to not "reinvent the wheel"
+          when it comes to designing a data warehouse. However, just as the
+          baker, before the baking begins, the database developer will need to
+          fully understand the lowest proportions of ingredients (smallest
+          grain) to fit the needs of the business purposes for the cube, then
+          design the correct recipe using said granularity for their data store
+          "recipe", to avoid wasted time and money.
+          <br />
+          <figure>
+            <img
+              src="../images/sales-data-model.webp"
+              alt="Sample sales data model image from Mozart Data"
+              class="centerimg"
+            />
+            <figcaption class="source">
+              Sample sales data model showing granularity in dimension tables.
+              &nbsp; Source:
+              <a
+                href="https://www.mozartdata.com/post/data-grain-what-s-the-right-level-of-granularity-when-building-data-models"
+                >Mozart Data
+              </a>
+            </figcaption>
+          </figure>
+        </p>
+        <p class="normal-text"></p>
+        <ol class="sources">
+          Sources:
+          <li class="normal-text">
+            <a
+              href="https://www.kimballgroup.com/2007/07/keep-to-the-grain-in-dimensional-modeling/"
+              >Kimball, Ralph "Keep to the Grain in Dimensional Modeling",
+              Kimball Group</a
+            >
+          </li>
+          <li class="normal-text">
+            <a href="https://www.kimballgroup.com/2003/03/declaring-the-grain/"
+              >Kimball, Ralph "Declaring the Grain", Kimball Group</a
+            >
+          </li>
+          <li class="normal-text">
+            <a
+              href="https://www.mozartdata.com/post/data-grain-what-s-the-right-level-of-granularity-when-building-data-models"
+              >"Data Grain: What’s the Right Level of Granularity When Building
+              Data Models", Mozart Data</a
+            >
+          </li>
+          <li class="normal-text">
+            <a href="https://www.youtube.com/watch?v=el2bRZjgVEE"
+              >"06 Understanding Granularity", Data Warehouse channel on
+              YouTube</a
+            >
+          </li>
+        </ol>
+      </div>
+    </main>
+    <footer id="autofooter"></footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

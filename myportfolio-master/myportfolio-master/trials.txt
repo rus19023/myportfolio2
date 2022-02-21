@@ -1,0 +1,12 @@
+I am stuck!
+
+I don't understand this from the trello:
+
+"Add a variable to store our list of tasks to the Todos.js module. todoList = null;"
+
+I tried using let and const outside the class in Todos.js.
+I tried putting it in the constructor.
+I tried using [] instead of null.
+I tried putting it in the main.js file.
+
+None of them works, I get either errors or nested arrays, or both, for the above. I can't think of  anywhere else to put it. I have researched and debugged and I don't know what else to do...

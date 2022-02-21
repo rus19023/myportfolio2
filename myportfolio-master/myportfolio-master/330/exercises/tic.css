@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center; /* center pattern horizontally */
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* wrap box pattern */
+    max-width: 216px; /* set pattern total width */
+    height: 90vh; /* display 100% of the veiwport height  */
+    align-content: center; /* center all div boxes vertically  */
+  }
+
+  div {
+    width: 0px; /* set div box size  */
+    height: 0px; /* set div box size  */
+    text-align: center;
+    font-size: 18vh;
+  }
+  div#msg {
+      border: none;
+      font-size: 6vh;
+      width: 95%;
+  }
+
+  div:nth-child(-n+6) {
+    border-bottom: 3px solid #000; /* set div box bottom border  */
+  }
+
+  div:nth-child(3n-2),
+  div:nth-child(3n-1) {
+    border-right: 3px solid #000; /* set div box right border  */
+  }
+
+@media screen and (min-width: 400px) {
+    .container {
+        max-width: 306px; /* set pattern total width */
+    }
+
+    div {
+        width: 100px; /* set div box size  */
+        height: 100px; /* set div box size  */
+    }
+}

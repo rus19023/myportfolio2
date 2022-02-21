@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+    <title id="cit327weekpagetitle">page title</title>
+  </head>
+
+  <body>
+    <header id="autoheader">auto header</header>
+    <main>
+      <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
+      <div>
+        <h2 id="paperTitle">paper title</h2>
+        <h3>Inmon Methodology</h3>
+        <p class="normal-text">Bill Inmon says</p>
+        <pre class="code">
+
+            “one of the great appeals of the data warehousing concept is there is a single version of the truth”.
+          </pre
+        >
+        <p class="normal-text">
+          Mr. Inmon's ideas for data warehouses work on a "bottom-up" principle.
+          His model starts with the enterprise's data model, specifically what
+          is most important for the business to run. The structure of the data
+          from varied sources will be integrated and normalized to avoid
+          duplication of data, help identify and prevent data anomalies. Once
+          the infrastructure is in place, the data will be collected, analyzed,
+          and stored in data marts built for each business purpose needed,
+          possibly denormalized to facilitate reporting for decision-making. The
+          warehouse is the only source of data for the data marts.
+        </p>
+        <p class="normal-text">
+          The Inmon model is best for large-scale data warehouses. These data
+          warehouses do take many months to design and build, so they are not
+          suitable for an off-the-cuff solution. It will be an expensive,
+          long-term investment, but worth it in the long run. It should be more
+          secure, as there are no external or non-standardized data collections.
+          There will be costs in the future upkeep, as the data will grow and
+          more employees will be needed to support the data warehouse.
+        </p>
+
+        <h3>Kimball Methodology</h3>
+        <p class="normal-text">
+          Ralph Kimball had different thoughts about big data storage and
+          analysis. He was concerned that if the data was normalized, it would
+          be difficult to analyze. He begins with finding the purpose for each
+          main business purpose, and builds the marts for each of these
+          purposes. The data warehouse is a conglomerate of these data marts
+          built around the central repository of raw data, which comes from
+          varies sources. Each of these marts becomes a point in the "star"
+          pattern of the data warehouse.
+        </p>
+        <p class="normal-text">
+          Kimball's methodology is more suitable for small-scale data
+          warehouses. These data warehouses are designed to be done quickly, and
+          are suitable for a quickly needed project. They will be much less
+          expensive and completed much faster. There will be minimal costs for
+          future upkeep.
+        </p>
+
+        <h3>OLTP-Online Transactional Processing</h3>
+        <p class="normal-text">
+          Online Transactional Processing (OLTP) is a term for the process of
+          processing transactions in a database. Historically, database
+          transactions have been considered those related to business, such as
+          financial transactions at a bank, purchases at a store, removing
+          shipped products from inventory, ticket booking systems, etc. A newer
+          definition of transactions would include any process that changes the
+          state of the database. The integrity consistensy and stability of the
+          system, data and its relationships are the primary goals of OLTP, as
+          the parties affected by any downtime are the end users, customers or
+          clients.
+        </p>
+        <p class="normal-text">
+          This type of data structure is not well-suited to reporting or data
+          analysis. Data optimization is geared toward improving the efficiency
+          of the data processing and reporting processes. While the Inmon model
+          is mostly used for this type of system, it can also work for OLAP
+          systems that draw from OLTP data.
+        </p>
+
+        <h3>OLAP-Online Analytical Processing</h3>
+        <p class="normal-text">
+          Online Analytical Processing (OLAP) is very different than OLTP. It is
+          more the use case for specific data marts. Data is generally
+          normalized less than in OLTP, or not at all. Redundancy abounds, with
+          multiple sets of the same data that are sorted by different criteria,
+          used to create reports more efficiently than can happen in relational
+          models.
+        </p>
+        <p class="normal-text">
+          There are also hybrid systems that combine these two with additional
+          layers of applications. This type of system can support either Inmon's
+          or Kimball's models.
+        </p>
+        <br />
+        <p class="sources">
+          Sources: <br />
+          <br />
+          <a
+            href="https://panoply.io/data-warehouse-guide/data-mart-vs-data-warehouse/"
+            >"Data Marts vs. Data Warehouses", Panoply.io</a
+          >
+          <br />
+
+          <a
+            href="https://tdan.com/data-warehouse-design-inmon-versus-kimball/20300"
+            >Seiner, Robert S., "Data Warehouse Design – Inmon versus Kimball",
+            The Data Administration Newsletter</a
+          >
+          <br />
+
+          <a
+            href="https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/ch03.html#idm45085121800192"
+            >Kleppmann, Martin, "Designing Data-Intensive Applications",
+            <span class="italic">Section 3. </span>
+          </a>
+          <br />
+
+          <a
+            href="https://piethein.medium.com/the-extinction-of-enterprise-data-warehousing-570b0034f47f"
+            >Strengholt, Piethein, "The Extinction of Enterprise Data
+            Warehousing"</a
+          >
+        </p>
+      </div>
+    </main>
+    <footer id="autofooter"></footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

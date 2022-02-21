@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
+  <title>Story Editor</title>
+
+  <style>
+	.inputs {
+  		background-color: rgb(255, 224, 241);
+	}
+
+	.inputs, .buttons {
+		border-radius: 5px;
+		margin: 1vw;
+		border: 2px solid hotpink;
+	}
+
+	.buttons {
+		background: rgb(187, 28, 116);
+		color: pink;
+	}
+
+  	textarea {
+  		width:800px;
+  		height: 250px;
+  	}
+  </style>
+</head>
+
+	<body>
+		<header id="autoheader2">auto header</header>
+		<main>
+			<h1>Story Editor</h1>
+			Story Name:<input class="inputs" id=name_input type='text'></input>
+			<section>
+				<button class="buttons" onclick="loadStory()">Find and Edit It</button>
+				<button class="buttons" onclick="saveStory()">Save It</button>
+				<button class="buttons" onclick="displayStory()">Display It</button>
+			</section>
+			<textarea class="inputs" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+			<section id="story_display"></section>
+		</main>
+		<footer id="autofooter"></footer>
+		<script src="../../js/main.js" ></script>
+		<script src="../../js/menu.js"></script>
+	</body>
+</html>

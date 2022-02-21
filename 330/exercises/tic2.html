@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>Homework 3- tic tac toe</title>
+<style type="text/css">
+    input.btn {
+        background-color: #AC58FA;
+        color: gold;
+        font-size: .5in;
+        font-family: "Courier New", "Courier";
+        font-weight: bold;
+        width: 1in;
+        height: 1in;
+    }
+</style>
+<script type="text/javascript">
+var cell;
+var symbol = "X";
+var numMoves= 0;
+var xCount= 0;
+var oCount= 0;
+var tieCount= 0;
+var b1;
+var b2;
+var b3;
+var b4;
+var b5;
+var b6;
+var b7;
+var b8;
+var b9;
+currentmove = "X";
+ 
+function changeBox(cell){
+    if (cell.value=="")
+        {cell.value=symbol;
+        numMoves ++;
+        document.secondForm.currentmove.value= currentmove;
+         }
+     else {
+      alert("This square is occupied");
+    }
+    if (checkWin()){
+        alert ("Player " + cell.value + " wins! " )
+        if (symbol == "X"){
+            xCount ++;
+        document.secondForm.xscore.value= xCount;
+        }
+        else {
+            oCount ++;
+            document.secondForm.oscore.value= oCount;
+        }
+        clearBtn();
+        return;    
+    }
+    if (numMoves == 9) {
+        alert ("The game is tied!");
+        tieCount ++;
+        document.secondForm.tiegame.value= tieCount;
+        clearBtn();
+        return;
+    }
+    else {
+        changeSymbol();
+    }
+}
+
+function changeSymbol(){
+    if (symbol== "X")
+        {symbol="O";
+        currentmove= "O"
+        }
+     else {
+      symbol="X";
+        currentmove="X"
+         }
+}
+
+function checkWin(){
+    with (document.simpleForm) {
+        if ((b1.value == "X") && (b2.value=="X") && (b3.value == "X")) 
+            return true;   
+        else if ((b4.value == "X") && (b5.value=="X") && (b6.value == "X")) 
+            return true;
+        else if ((b7.value == "X") && (b8.value=="X") && (b9.value == "X")) 
+            return true;
+        else if ((b1.value == "X") && (b4.value=="X") && (b7.value == "X")) 
+            return true;
+        else if ((b2.value == "X") && (b5.value=="X") && (b8.value == "X")) 
+            return true;   
+        else if ((b3.value == "X") && (b6.value=="X") && (b9.value == "X")) 
+            return true;   
+        else if ((b1.value == "X") && (b5.value=="X") && (b9.value == "X")) 
+            return true;
+        else if ((b3.value == "X") && (b5.value=="X") && (b7.value == "X")) 
+            return true;
+     
+         
+         
+        else if ((b1.value == "O") && (b2.value=="O") && (b3.value == "O")) 
+            return true;
+        if ((b4.value == "O") && (b5.value=="O") && (b6.value == "O")) 
+            return true;
+        if ((b7.value == "O") && (b8.value=="O") && (b9.value == "O")) 
+            return true;   
+        if ((b1.value == "O") && (b4.value=="O") && (b7.value == "O")) 
+            return true;   
+        if ((b2.value == "O") && (b5.value=="O") && (b8.value == "O")) 
+            return true;   
+        if ((b3.value == "O") && (b6.value=="O") && (b9.value == "O")) 
+            return true;
+        if ((b1.value == "O") && (b5.value=="O") && (b9.value == "O")) 
+            return true;
+        if ((b3.value == "O") && (b5.value=="O") && (b7.value == "O")) 
+            return true;
+ 
+    }
+}
+ 
+function clearBtn(){
+    document.simpleForm.b1.value="";
+    document.simpleForm.b2.value="";
+    document.simpleForm.b3.value="";
+    document.simpleForm.b4.value="";
+    document.simpleForm.b5.value="";
+    document.simpleForm.b6.value="";
+    document.simpleForm.b7.value="";
+    document.simpleForm.b8.value="";
+    document.simpleForm.b9.value="";
+    symbol="X";
+    numMoves=0;
+}
+ 
+function erase() {
+    xCount=0;
+    oCount=0;
+    tieCount=0;
+    alert ("All square! Have fun!");
+}
+ 
+</script>
+ 
+</HEAD>
+ 
+<body>
+ 
+<FORM name=simpleForm>
+ 
+<input class="btn" type="button" name="b1" value="" onclick=changeBox(this)>
+<input class="btn" type="button" name="b2" value="" onclick=changeBox(this)>
+<input class="btn" type="button" name="b3" value="" onclick=changeBox(this)>
+<br/>
+<input class="btn" type="button" name="b4" value="" onclick=changeBox(this)>
+<input class="btn" type="button" name="b5" value="" onclick=changeBox(this)>
+<input class="btn" type="button" name="b6" value="" onclick=changeBox(this)>
+<br/>
+<input class="btn" type="button" name="b7" value="" onclick=changeBox(this)>
+<input class="btn" type="button" name="b8" value="" onclick=changeBox(this)>
+<input class="btn" type="button" name="b9" value="" onclick=changeBox(this)>
+<br/>
+<br/>
+</form>
+ 
+<FORM name=secondForm>
+Current Move: <input type="text" name="currentmove" value="X" size="2"> </br>
+<INPUT type="reset" value="Play Again" onclick="clearBtn()">
+</br>
+</BR>
+Score: X <input type="text" name="xscore" value="0" size=3>
+O <input type="text" name="oscore" value="0" size=3>
+TIE <input type="text" name="tiegame" value="0" size=3></br>
+<INPUT type="reset" value="RESET SCORE AND GAME" onclick="erase()">
+</br>
+</form>
+ 
+</BODY>
+ 
+</html>

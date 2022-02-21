@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
+@import "variables";
+@import "grid";
+@import "large";
+@import "colors";
+@import "todo";
+@import "quizninja";
+@import "checkbox";
+
+html {
+  color: $accent;
+  background: $background; 
+  font-size: 12px;
+}
+.centered {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: $font5;
+}
+
+h2#tab-bar {
+  overflow: hidden;
+  margin-left: 4vw;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  height: 4vh;
+  a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: $nav;
+    padding: 1vw 2vw;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $accent;
+  max-width: 90%;
+  font-family: $fontsecond;
+  background: black;
+  border-radius: 10px;
+  margin: 2vh auto;
+}
+
+div,
+form,
+footer,
+ul,
+ol,
+p,
+header,
+section {
+  font-family: $fontprimary;
+  padding: 3vw;
+  background: black;
+  margin: 2vw 0;
+  border-radius: 10px;
+}
+
+.exercise {
+  border: $border;
+  border-radius: 10px;
+  margin: 2vw;
+}
+
+.morespc { line-height: 1.5; }
+
+.centerimg {
+  display: block;
+  width: 65%;
+  margin: auto;
+}
+
+h1 {
+  font-size: $font4;
+  color: $accent;
+}
+
+h2 {
+  font-size: $font3;
+}
+
+h3 {
+  font-size: $font3;
+  width: 90%;
+}
+
+h4 {
+  font-size: $font3;
+  width: 85%;
+}
+
+h5 {
+  font-size: $font2;
+  width: 80%;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: $font2;
+  width: 75%;
+  font-weight: bold;
+}
+
+.normal-text {
+  color: $primary;
+  font-family: $fontprimary;
+  font-size: 2.5vw;
+  padding: 2vw;
+  margin: 0 2vw;
+  background: black;
+}
+
+.nostyle {
+  list-style: none;
+}
+
+li.nav a {
+  font-size: $font3;
+}
+
+ol li {
+  color: $accent;
+  & a {
+    font-size: $font2;
+    color: $p-150;
+  }
+  & a:hover {
+    color: $p-120;
+  }
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $p90;
+}
+
+a:hover {
+  color: $p180;
+}
+
+.buttons {
+  text-align: center;
+  cursor: pointer;
+  background: black;
+  box-shadow: $formshadow;
+  padding: 2vw;
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+  height: 10vh;
+  border-radius: 10px;
+  color: $accent;
+  font-family: $fontsecond;
+  font-weight: bold;
+  font-size: $font3;
+  & a {
+    text-decoration: none;
+    color: $accent;
+    font-size: 4vh;
+  }
+}
+
+.padit {
+  padding: 4vw;
+  width: 100%;
+}
+
+#siteTitle2 {
+  font-size: $font4;
+  color: $accent;
+  font-family: $fontsecond;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.inputs {
+  max-width: 90%;
+}
+
+.textarea,
+.inputs {
+  background: $primary;
+  color: black;
+  border-radius: 10px;
+  border: $inputborder;
+  margin: 2vw;
+}
+
+textarea {
+  width: 90%;
+  height: 25vh;
+}
+
+footer#autofooter {
+  font-family: $fontsecond;
+  font-size: 3vh;
+  font-weight: bold;
+  color: $accent;
+  text-align: center;
+  margin-bottom: 6vh;
+}
+
+.source {
+  text-align: center;
+  color: $p-90;
+}
+
+.sources {
+  text-align: left;
+  color: $p120;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: 2vh auto;
+  & a {
+    text-decoration: none;
+    color: $p120;
+    font-size: 3vh;
+  }
+}
+
+.code {
+  background: $primary;
+  color: black;
+  font-size: $font3;
+  border-radius: 10px;
+  padding: 1.5vw;
+  font-family: $fontsecond;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.italic {
+  font-style: italic;
+}
+
+h4.indent, p.indenth4 {
+  padding-left: 4vw;
+}
+
+ul {
+  list-style: none;
+}
+
+h5.indent, p.indenth5, p ul li.indent {
+  padding-left: 8vw;
+}

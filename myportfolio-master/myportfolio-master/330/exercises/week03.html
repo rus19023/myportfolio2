@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
+    <title id="mainpagetitle">Title of Your Page</title>
+  </head>
+
+  <body>
+		<header id="autoheader">auto header</header>
+		<main>
+			<h1 id="wdd330weekexercisetitle" class="padit">Exercises title displays here</h1>
+      <section>
+        <a href="https://www.w3resource.com/javascript-exercises/javascript-dom-exercises.php">Javascript DOM Exercises</a>
+        <ol>
+          <li class="exercise">
+            <div>
+              <h2>JS DOM paragraph style</h2>
+              <p class="normal-text">
+                Modify the style of the paragraph text through javascript code. </p>
+                <p class="exercise" id ='text'>JavaScript Exercises - w3resource</p>
+              <div>
+              <button class="buttons" id="jsstyle"
+              onclick="js_style()">Change Style</button>
+              </div>
+                <a href=""></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="exercise">
+            <div>
+              <h2>Return first and last name from a form - w3resource</h2>
+              <p class="normal-text">
+                Write a JavaScript function to get the values of First and Last name of the following form.
+                <form id="form1" onsubmit="getFormvalue()">
+                First name: <input class="inputs" type="text" name="fname" value="David"><br>
+                Last name: <input class="inputs" type="text" name="lname" value="Beckham"><br>
+                <input class="buttons" type="submit" value="Submit">
+              </p>
+              <div class="exercise" id="output">Output displays here</div>
+            </div>
+            <p class="normal-text">
+              Question: Why did does my code give an "undefined" and <a href="https://www.w3resource.com/javascript-exercises/javascript-dom-exercise-2.php">their solution doesn't?</a>
+            </p>
+          </li>
+
+          <li class="exercise">
+            <div>
+              <h2>Change background with Javascript</h2>
+              <p class="normal-text">
+                Write a JavaScript program to set the background color of a paragraph.
+              </p>
+              <p class="exercise" id ='text2'>JavaScript Exercises - w3resource</p>
+              <div>
+                <button class="buttons" id="jsstyle2" onclick="js_style2()">Change Background</button>
+              </div>
+            </div>
+          </li>
+
+          <li class="exercise">
+            <div>
+              <h2></h2>
+              <p class="normal-text">
+                Write a JavaScript function to get the value of the href, hreflang, rel, target, and type attributes of the specified link.
+              </p>
+              <p>
+                <a id="text3" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.w3resource.com/">w3resource</a>
+
+                <button class="buttons" id="getAttrib"
+                onclick="getAttributes()">Get Attributes</button>
+              </p>
+            </div>
+          </li>
+
+          <li><a href="ninjaquiz.html">Ninja Quiz Game</a></li>
+
+        </ol>
+      </section>
+    </main>
+    <footer id="autofooter"></footer>
+    <script>
+      function js_style() {
+        var text = document.getElementById("text");
+        text.style.color = "red";
+        text.style.fontSize = "30px";
+        text.style.fontWeight = "bold";
+      }
+
+      function getFormvalue() {
+        event.preventDefault();
+        let input = document.getElementById("form1");
+        let output;
+        console.log(input);
+        for (let i = 0; i < input.length; i++) {
+          if (input.elements[i].value!='Submit'){
+            output += ` ${input.elements[i].value}`;
+          }
+        }
+        //console.log(output);
+        document.getElementById("output").innerHTML = output;
+      }
+
+      function js_style2() {
+        var text = document.getElementById("text2");
+        text.style.background = "hotpink";
+      }
+
+      function getAttributes() {
+        var text = document.getElementById("text3");
+        text.style.background = "hotpink";
+      }
+    </script>
+  </body>
+</html>
