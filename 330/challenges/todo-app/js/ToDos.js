@@ -39,24 +39,22 @@ export default class ToDos {
   listAll() {
     this.todoList = getTodos(this.LSkey);
     renderTodoList(this.todoList);
-    this.itemsLeft();
+    this.itemsLeft;
   }
 
   listActive() {
     this.todoList = getTodos(this.LSkey);
     renderTodoList(this.todoList.filter(el => el.done === false));
-    this.itemsLeft;
   }
 
   listDone() {
     this.todoList = getTodos(this.LSkey);
     renderTodoList(this.todoList.filter(el => el.done === true));
-    this.itemsLeft;
   }
 
   removeTodo(id) {
     deleteItem(id);
-    this.listAll();
+    this.listAll;
   }
 
   // Mark selected item as completed

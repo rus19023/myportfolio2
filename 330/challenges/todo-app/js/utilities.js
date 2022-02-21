@@ -14,7 +14,7 @@ add a touchend event listener to an element for mobile with a click event fallba
 */
 
 function onTouch(elSelector, callback) {
-    let event = 'touchend';
+    let event = 'click';
     //let event = 'click';
     const el = qs(elSelector);
     //console.log(elSelector);
